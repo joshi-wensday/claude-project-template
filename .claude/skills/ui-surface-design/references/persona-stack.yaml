@@ -1,0 +1,64 @@
+# Persona stack for ui-surface-design skill.
+# Paths relative to .claude/knowledge/design/.
+
+by_surface_type:
+  pricing:
+    - personas/art-director.md
+    - personas/visual-designer.md
+    - personas/conversion-designer.md
+    - personas/ux-writer.md
+    - personas/accessibility-specialist.md
+  landing:
+    - personas/art-director.md
+    - personas/visual-designer.md
+    - personas/conversion-designer.md
+    - personas/ux-writer.md
+    - personas/accessibility-specialist.md
+  checkout:
+    - personas/visual-designer.md
+    - personas/conversion-designer.md
+    - personas/ux-writer.md
+    - personas/accessibility-specialist.md
+    # trust-designer added in v0.2
+  signup:
+    - personas/visual-designer.md
+    - personas/onboarding-designer.md
+    - personas/conversion-designer.md
+    - personas/ux-writer.md
+    - personas/accessibility-specialist.md
+  onboarding:
+    - personas/visual-designer.md
+    - personas/onboarding-designer.md
+    - personas/ux-writer.md
+    - personas/accessibility-specialist.md
+  dashboard-home:
+    - personas/art-director.md
+    - personas/visual-designer.md
+    - personas/data-designer.md
+    - personas/accessibility-specialist.md
+  dashboard-detail:
+    - personas/visual-designer.md
+    - personas/data-designer.md
+    - personas/accessibility-specialist.md
+  empty-state:
+    - personas/visual-designer.md
+    - personas/onboarding-designer.md
+    - personas/ux-writer.md
+  error:
+    - personas/visual-designer.md
+    - personas/ux-writer.md
+
+fallback:
+  - personas/art-director.md
+  - personas/visual-designer.md
+  - personas/ux-writer.md
+  - personas/accessibility-specialist.md
+
+always_loaded:
+  - intent-taxonomy.md
+  - quality-bars.md
+  - domains/accessibility-wcag.md
+
+critic_pass_personas:
+  - personas/design-critic.md
+  - personas/accessibility-specialist.md

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1",
+  "level": "project",
+  "productType": "saas-app",
+  "primaryGoal": "activate",
+  "audienceSophistication": "professionals",
+  "emotionalRegister": ["serious-trustworthy", "premium-refined"],
+  "stakes": "medium",
+  "oneLineDescription": "Collaboration tool for product teams shipping weekly releases.",
+  "capturedAt": "2026-04-17T10:00:00Z"
+}

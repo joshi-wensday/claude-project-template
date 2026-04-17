@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1",
+  "version": "1.0.0",
+  "lastUpdated": "2026-04-17T10:00:00Z",
+  "tokens": {
+    "primitive": {
+      "color": {
+        "neutral-0": "oklch(99% 0 0)",
+        "neutral-9": "oklch(12% 0 0)",
+        "accent-5": "oklch(60% 0.18 250)"
+      },
+      "type": {
+        "sans": "Inter, system-ui, sans-serif",
+        "mono": "JetBrains Mono, ui-monospace, monospace",
+        "scale-0": "0.875rem",
+        "scale-1": "1rem",
+        "scale-2": "1.25rem",
+        "scale-3": "1.5rem"
+      },
+      "space": {
+        "1": "0.25rem",
+        "2": "0.5rem",
+        "3": "0.75rem",
+        "4": "1rem",
+        "6": "1.5rem",
+        "8": "2rem"
+      },
+      "radius": { "sm": "0.25rem", "md": "0.5rem", "lg": "0.75rem" },
+      "shadow": { "sm": "0 1px 2px rgb(0 0 0 / 0.05)" },
+      "motion": { "fast": "120ms", "base": "200ms", "slow": "320ms" }
+    },
+    "semantic": {
+      "background": "{color.neutral-0}",
+      "foreground": "{color.neutral-9}",
+      "surface": "{color.neutral-0}",
+      "border": "{color.neutral-9}/10",
+      "action": "{color.accent-5}",
+      "actionForeground": "{color.neutral-0}"
+    }
+  },
+  "components": {
+    "button": {
+      "role": "primitive",
+      "job": "Primary affordance for user-initiated actions",
+      "variants": { "emphasis": ["primary", "secondary", "ghost"], "size": ["sm", "md", "lg"] },
+      "states": ["default", "hover", "focus", "active", "disabled", "loading"]
+    }
+  },
+  "changelog": [
+    {
+      "version": "1.0.0",
+      "at": "2026-04-17T10:00:00Z",
+      "change": "initial",
+      "reason": "design-foundation greenfield run"
+    }
+  ]
+}

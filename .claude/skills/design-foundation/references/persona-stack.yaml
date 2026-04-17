@@ -1,0 +1,30 @@
+# Persona stack loaded by design-foundation skill.
+# Paths are relative to .claude/knowledge/design/.
+
+default:
+  - personas/art-director.md
+  - personas/visual-designer.md
+  - personas/design-systems-architect.md
+  - personas/design-critic.md
+  - personas/ux-writer.md
+  - personas/accessibility-specialist.md
+
+# By-stage loads — use these if tighter context control is needed.
+stages:
+  intent_capture:
+    - intent-taxonomy.md
+  brand_import:
+    - personas/ux-writer.md
+  aesthetic_divergence:
+    - personas/art-director.md
+    - personas/design-critic.md
+    - quality-bars.md
+    # + one aesthetic-references/*.md per subagent based on assigned stake
+  system_synthesis:
+    - personas/design-systems-architect.md
+    - personas/visual-designer.md
+    - personas/accessibility-specialist.md
+    - domains/typography.md
+    - domains/color-and-contrast.md
+    - domains/layout-and-composition.md
+    - domains/accessibility-wcag.md

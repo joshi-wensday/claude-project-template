@@ -1,0 +1,7 @@
+{
+  "schemaVersion": "1",
+  "level": "project",
+  "productType": "not-a-real-type",
+  "primaryGoal": "activate",
+  "stakes": "medium"
+}

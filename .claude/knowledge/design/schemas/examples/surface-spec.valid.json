@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1",
+  "name": "pricing",
+  "designSystemVersion": "1.0.0",
+  "systemUnbound": false,
+  "intent": {
+    "surfaceType": "pricing",
+    "primaryAction": "select-plan-and-continue-to-checkout",
+    "successMetric": "cta-click-rate",
+    "emotionalMoment": "confident-choice-not-anxious-comparison"
+  },
+  "sections": [
+    {
+      "name": "hero",
+      "components": ["headline", "subheadline", "button"],
+      "notes": "Two-line headline stating outcome, not features. Primary CTA scrolls to plan selector."
+    },
+    {
+      "name": "plan-selector",
+      "components": ["plan-card", "button"],
+      "notes": "Three plans. Middle plan marked 'recommended' via visual emphasis (border+label), not gimmicky size."
+    }
+  ],
+  "componentsUsed": ["headline", "subheadline", "button", "plan-card"],
+  "componentsFlagged": [],
+  "tokensUsed": ["color.neutral-0", "color.neutral-9", "color.accent-5", "space.4", "space.8", "type.scale-3"],
+  "copyNotes": "Plan names describe outcomes ('For teams shipping weekly'), not sizes ('Pro'). No scarcity language.",
+  "accessibilityNotes": "Plan cards are keyboard-navigable as a radiogroup. Price uses text, not image."
+}

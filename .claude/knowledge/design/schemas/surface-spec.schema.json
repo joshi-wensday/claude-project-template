@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/surface-spec.schema.json",
+  "title": "SurfaceSpec",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "name",
+    "designSystemVersion",
+    "systemUnbound",
+    "intent",
+    "sections",
+    "componentsUsed",
+    "tokensUsed"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1" },
+    "name": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "designSystemVersion": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "systemUnbound": { "type": "boolean" },
+    "intent": {
+      "type": "object",
+      "required": ["surfaceType", "primaryAction", "successMetric", "emotionalMoment"],
+      "properties": {
+        "surfaceType": { "type": "string" },
+        "primaryAction": { "type": "string", "minLength": 5 },
+        "successMetric": { "type": "string", "minLength": 3 },
+        "emotionalMoment": { "type": "string", "minLength": 5 }
+      },
+      "additionalProperties": false
+    },
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "components"],
+        "properties": {
+          "name": { "type": "string" },
+          "components": { "type": "array", "items": { "type": "string" } },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "componentsUsed": { "type": "array", "items": { "type": "string" } },
+    "componentsFlagged": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "whyNeeded"],
+        "properties": {
+          "name": { "type": "string" },
+          "whyNeeded": { "type": "string" }
+        }
+      }
+    },
+    "tokensUsed": { "type": "array", "items": { "type": "string" } },
+    "copyNotes": { "type": "string" },
+    "accessibilityNotes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

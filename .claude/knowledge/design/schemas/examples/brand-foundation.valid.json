@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1",
+  "strictness": "flexible",
+  "attributes": ["trusted", "irreverent", "precise"],
+  "voice": {
+    "tone": "friendly-expert",
+    "personality": "a helpful senior engineer who has seen it all",
+    "doSay": ["we", "you", "let's"],
+    "dontSay": ["leverage", "synergy", "ecosystem"]
+  },
+  "antiReferences": [
+    "generic-enterprise-saas",
+    "purple-gradient-on-white"
+  ],
+  "inspirationReferences": [
+    { "name": "linear.app", "whatToLearn": "restrained monochrome with purposeful color accents" }
+  ],
+  "technicalConstraints": {
+    "framework": "react",
+    "cssApproach": "tailwind",
+    "browserTargets": ["evergreen"],
+    "deviceTargets": ["desktop", "mobile-responsive"]
+  }
+}

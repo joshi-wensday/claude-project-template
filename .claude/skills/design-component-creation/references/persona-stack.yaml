@@ -1,0 +1,14 @@
+# Persona stack for design-component-creation skill.
+# Paths relative to .claude/knowledge/design/.
+
+default:
+  - personas/design-systems-architect.md
+  - personas/visual-designer.md    # v0.1 proxy for interaction-designer
+  - personas/accessibility-specialist.md
+
+always_loaded:
+  - intent-taxonomy.md             # Level 3 component intent
+  - quality-bars.md
+  - domains/accessibility-wcag.md
+
+# v0.2 will swap visual-designer for interaction-designer here.

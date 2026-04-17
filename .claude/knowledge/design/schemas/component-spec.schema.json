@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/component-spec.schema.json",
+  "title": "ComponentSpec",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "name",
+    "addedInDesignSystemVersion",
+    "role",
+    "job",
+    "props",
+    "states",
+    "semanticHtml",
+    "accessibility",
+    "tokensUsed",
+    "reasonCreated"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1" },
+    "name": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+    "addedInDesignSystemVersion": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "role": { "enum": ["primitive", "pattern", "template"] },
+    "job": { "type": "string", "minLength": 20 },
+    "props": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "type", "required"],
+        "properties": {
+          "name": { "type": "string" },
+          "type": { "type": "string" },
+          "required": { "type": "boolean" },
+          "default": {}
+        },
+        "additionalProperties": false
+      }
+    },
+    "variants": { "type": "object" },
+    "states": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "semanticHtml": { "type": "string", "minLength": 10 },
+    "accessibility": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "tokensUsed": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "composesComponents": { "type": "array", "items": { "type": "string" } },
+    "reasonCreated": { "type": "string", "minLength": 10 },
+    "reasonExtended": { "type": ["string", "null"] }
+  },
+  "additionalProperties": false
+}

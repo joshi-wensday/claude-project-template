@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1",
+  "name": "plan-card",
+  "addedInDesignSystemVersion": "1.1.0",
+  "role": "pattern",
+  "job": "Display a single pricing plan with its name, price, benefits list, and selection CTA.",
+  "props": [
+    { "name": "name", "type": "string", "required": true },
+    { "name": "price", "type": "string", "required": true },
+    { "name": "period", "type": "string", "required": true },
+    { "name": "benefits", "type": "string[]", "required": true },
+    { "name": "recommended", "type": "boolean", "required": false, "default": false },
+    { "name": "ctaLabel", "type": "string", "required": true },
+    { "name": "onSelect", "type": "() => void", "required": true }
+  ],
+  "variants": {
+    "emphasis": ["default", "recommended"]
+  },
+  "states": ["default", "hover", "focus", "selected", "disabled"],
+  "semanticHtml": "article with h3 for name, p for price, ul/li for benefits, button for CTA",
+  "accessibility": [
+    "Focusable as a single interactive region via the inner button",
+    "Recommended state announced via aria-label",
+    "Color is not the only indicator of recommended state — 'Recommended' text label required"
+  ],
+  "tokensUsed": ["color.surface", "color.border", "color.action", "space.6", "radius.md"],
+  "composesComponents": ["button"],
+  "reasonCreated": "Needed by pricing surface design; no existing component handles plan presentation.",
+  "reasonExtended": null
+}

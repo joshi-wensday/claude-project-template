@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "auto-improve config",
+  "type": "object",
+  "required": [
+    "wall_clock_hours",
+    "iteration_cap_per_pass",
+    "scope_advance_threshold",
+    "scope_advance_window",
+    "critic_accept_threshold",
+    "critic_veto_threshold",
+    "min_iterations_before_reject",
+    "parallel_critics",
+    "critics",
+    "gates",
+    "project"
+  ],
+  "properties": {
+    "wall_clock_hours": { "type": "number", "minimum": 0.1, "maximum": 24 },
+    "iteration_cap_per_pass": { "type": "integer", "minimum": 1, "maximum": 10 },
+    "scope_advance_threshold": { "type": "number", "minimum": 0, "maximum": 10 },
+    "scope_advance_window": { "type": "integer", "minimum": 1, "maximum": 10 },
+    "critic_accept_threshold": { "type": "number", "minimum": 0, "maximum": 10 },
+    "critic_veto_threshold": { "type": "number", "minimum": 0, "maximum": 10 },
+    "min_iterations_before_reject": { "type": "integer", "minimum": 0, "maximum": 5 },
+    "parallel_critics": { "type": "boolean" },
+    "critics": {
+      "type": "array",
+      "items": { "enum": ["design-system", "ux", "brand", "a11y-perf"] },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "gates": {
+      "type": "array",
+      "items": { "enum": ["typescript", "lint", "test", "lighthouse", "axe"] },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "project": {
+      "type": "object",
+      "required": ["dev_server", "dev_url", "build_command", "lint_command", "test_command", "typescript_command"],
+      "properties": {
+        "dev_server": { "type": "string", "minLength": 1 },
+        "dev_url": { "type": "string", "format": "uri" },
+        "build_command": { "type": "string", "minLength": 1 },
+        "lint_command": { "type": "string", "minLength": 1 },
+        "test_command": { "type": "string", "minLength": 1 },
+        "typescript_command": { "type": "string", "minLength": 1 },
+        "trunk_base": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

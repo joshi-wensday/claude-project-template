@@ -1,0 +1,18 @@
+{
+  "name": "auto-improve-local",
+  "description": "Local marketplace for the auto-improve site polishing plugin",
+  "owner": {
+    "name": "Jacob Whyte"
+  },
+  "plugins": [
+    {
+      "name": "auto-improve",
+      "description": "Autonomous overnight loop that iteratively improves a website against a design system and brand brief, with a critic council and trunk-based pass branches.",
+      "version": "0.1.0",
+      "source": "./",
+      "author": {
+        "name": "Jacob Whyte"
+      }
+    }
+  ]
+}

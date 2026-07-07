@@ -1,0 +1,27 @@
+{
+  "extraKnownMarketplaces": {
+    "ui-ux-pro-max-skill": {
+      "source": {
+        "source": "github",
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill"
+      }
+    },
+    "superpowers-dev": {
+      "source": {
+        "source": "github",
+        "repo": "obra/superpowers"
+      }
+    },
+    "auto-improve-local": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/jacobwhyte/Desktop/Code/claude-project-template/.claude/plugins/auto-improve"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "ui-ux-pro-max@ui-ux-pro-max-skill": true,
+    "superpowers@superpowers-dev": true,
+    "auto-improve@auto-improve-local": true
+  }
+}

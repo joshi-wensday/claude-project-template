@@ -1,0 +1,26 @@
+wall_clock_hours: 1
+iteration_cap_per_pass: 5
+scope_advance_threshold: 0.5
+scope_advance_window: 2
+critic_accept_threshold: 8
+critic_veto_threshold: 4
+min_iterations_before_reject: 1
+parallel_critics: true
+critics:
+  - design-system
+  - ux
+  - brand
+  - a11y-perf
+gates:
+  - typescript
+  - lint
+  - test
+  - lighthouse
+  - axe
+project:
+  dev_server: "npm --prefix examples/sample-site run dev"
+  dev_url: "http://localhost:3000"
+  build_command: "npm --prefix examples/sample-site run build"
+  lint_command: "npm --prefix examples/sample-site run lint"
+  test_command: "echo 'no tests yet' && exit 0"
+  typescript_command: "cd examples/sample-site && npx tsc --noEmit"

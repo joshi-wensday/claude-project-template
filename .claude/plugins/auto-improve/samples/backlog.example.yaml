@@ -1,0 +1,13 @@
+scopes:
+  - slug: hero
+    purpose: "Above-the-fold landing experience"
+    routes: ["/"]
+    files: ["examples/sample-site/src/components/Hero.tsx", "examples/sample-site/src/app/page.tsx"]
+  - slug: pricing-page
+    purpose: "Convey pricing tiers cleanly"
+    routes: ["/pricing"]
+    files: ["examples/sample-site/src/app/pricing/**"]
+  - slug: footer
+    purpose: "Consistent, restrained footer across all routes"
+    routes: ["/", "/pricing", "/about", "/contact", "/blog"]
+    files: ["examples/sample-site/src/components/Footer.tsx"]

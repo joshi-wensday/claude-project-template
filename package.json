@@ -1,0 +1,31 @@
+{
+  "name": "claude-project-template",
+  "version": "1.0.0",
+  "description": "A template repository for managing Claude Code skills and workflows across projects. ## How It Works",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hopetown1/claude-project-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hopetown1/claude-project-template/issues"
+  },
+  "homepage": "https://github.com/Hopetown1/claude-project-template#readme",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.11.3",
+    "@lhci/cli": "^0.13.0",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "js-yaml": "^4.1.1",
+    "playwright": "^1.60.0"
+  }
+}

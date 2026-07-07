@@ -36,15 +36,22 @@ Start a session and describe what you want to build. The skills system activates
      └─ systematic-debugging (auto)     Triggers on "fix this" / "this is broken"
 ```
 
-## Skills (21 total)
+## Custom Skills
 
-### Custom Skills
+These live in `.claude/skills/` and travel with the repo.
+
 | Skill | Purpose |
 |-------|---------|
 | **research** | Deep-research a topic via Perplexity/WebSearch, save to `docs/research/` |
 | **skill-creator** | Create, test, and improve skills with quantitative eval infrastructure |
 | **contrarian-research-partner** | Challenge assumptions, find blind spots, stress-test ideas via Socratic dialogue |
-| **excalidraw-diagram-skill** | Produce Excalidraw JSON diagrams for workflows, architectures, concepts |
+| **first-principles** | Disassemble an idea to its observable parts and load-bearing assumptions |
+| **llm-council** | Run a decision through 5 AI advisors with peer review and synthesis |
+| **para-audit** | Audit and reorganize an Obsidian vault's PARA structure |
+| **excalidraw-diagram-skill** | Generate Excalidraw JSON diagrams that make visual arguments |
+| **design-prompt** | Build a paste-ready infographic prompt for a fresh Claude.ai design chat |
+| **algorithmic-art** | Create generative art with p5.js (flow fields, particle systems, seeded randomness) |
+| **canvas-design** | Create static visual art (posters, designs) as PNG/PDF via design philosophy |
 
 ### Design Skills
 | Skill | Purpose |
@@ -53,23 +60,26 @@ Start a session and describe what you want to build. The skills system activates
 | **ui-surface-design** | Design a specific surface (page/screen) with 2–3 variations against the design system |
 | **design-component-creation** | Fill a component gap in the design system (sole mutator of `design-system.json`) |
 
-### Superpowers Skills
-| Skill | Purpose |
-|-------|---------|
-| **brainstorming** | Collaborative design before any implementation |
-| **writing-plans** | Detailed implementation plans from approved specs |
-| **subagent-driven-development** | Execute plans via fresh subagent per task with two-stage review |
-| **executing-plans** | Alternative: execute plans inline with checkpoints |
-| **test-driven-development** | RED-GREEN-REFACTOR for all features and bugfixes |
-| **systematic-debugging** | 4-phase root cause investigation |
-| **verification-before-completion** | No completion claims without fresh evidence |
-| **using-git-worktrees** | Isolated workspaces for feature development |
-| **finishing-a-development-branch** | Merge, PR, keep, or discard completed work |
-| **requesting-code-review** | Dispatch code-reviewer subagent |
-| **receiving-code-review** | Respond to review feedback with technical rigor |
-| **dispatching-parallel-agents** | Delegate independent tasks to concurrent agents |
-| **writing-skills** | Create new skills using TDD applied to documentation |
-| **using-superpowers** | Bootstrap: ensures skills auto-trigger |
+The workflow skills (brainstorming, writing-plans, subagent-driven-development, TDD, systematic-debugging, etc.) are provided by the **superpowers** plugin — see below.
+
+## Plugins & External Tools
+
+These aren't bundled in this repo — they install separately.
+
+### Claude Code Plugins (auto-installed via `.claude/settings.json`)
+
+| Plugin | Purpose |
+|--------|---------|
+| **superpowers** ([obra/superpowers](https://github.com/obra/superpowers)) | Workflow skills: brainstorming, writing-plans, subagent-driven-development, TDD, systematic-debugging, verification-before-completion, code-review, git-worktrees, and more. |
+| **ui-ux-pro-max** ([nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)) | UI/UX design intelligence: 67 styles, 161 palettes, 57 font pairings, 15+ stack guidelines. |
+
+When you open this repo in Claude Code, you'll be prompted to trust the marketplaces and install both.
+
+### External Tools (manual install)
+
+| Tool | Install | Purpose |
+|------|---------|---------|
+| **Graphify** ([safishamsi/graphify](https://github.com/safishamsi/graphify)) | `pip install graphify && graphify install` | Builds a knowledge graph index of your codebase so Claude reads a compact graph instead of raw files — claims up to 71.5× fewer tokens per query on large repos. Re-run after major changes. |
 
 ## Design Workflow
 

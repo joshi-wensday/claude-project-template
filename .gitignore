@@ -1,0 +1,56 @@
+# --- Dependencies -----------------------------------------------------------
+node_modules/
+
+# --- Node / npm / pnpm logs -------------------------------------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.log
+
+# --- Next.js ----------------------------------------------------------------
+.next/
+out/
+.turbo/
+.vercel/
+
+# --- TypeScript build cache -------------------------------------------------
+*.tsbuildinfo
+
+# --- Bundler / build outputs ------------------------------------------------
+dist/
+build/
+
+# --- Editor / IDE -----------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# --- Environment files (keep .env.example if you add one) -------------------
+.env
+.env.local
+.env.*.local
+
+# --- Claude Code local overrides --------------------------------------------
+# Project-level .claude/settings.json IS tracked. Local override is not.
+.claude/settings.local.json
+
+# --- Auto-improve runtime artifacts -----------------------------------------
+# Per .claude/plugins/auto-improve/PORTING.md, these appear at the repo root
+# when the loop runs. Anchored with a leading `/` so the committed test
+# fixtures under examples/sample-site/ are NOT affected.
+/auto-improve.config.yaml
+/backlog.yaml
+/STOP
+/DESIGN_CONTRACT.md
+/docs/runs/
+
+# --- Auto-improve test-fixture inputs ---------------------------------------
+# The loop reads these at the repo root during dev runs. The canonical
+# committed copies live under examples/sample-site/.
+/BRAND.md
+/handoff-bundle/

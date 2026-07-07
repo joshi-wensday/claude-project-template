@@ -15,7 +15,7 @@
     "auto-improve-local": {
       "source": {
         "source": "directory",
-        "path": "/Users/jacobwhyte/Desktop/Code/claude-project-template/.claude/plugins/auto-improve"
+        "path": "C:/Users/Josh/Desktop/Code/claude-project-template/.claude/plugins/auto-improve"
       }
     }
   },
